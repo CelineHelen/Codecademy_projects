@@ -1,0 +1,26 @@
+weight=input("Please enter the weight of the package? ")
+weight1=int(weight)
+ground_cost=0
+if weight1<=2:
+  ground_cost=20+(1.5*weight1)
+elif 2<weight1<=6:
+  ground_cost=20+(3*weight1)
+elif 6<weight1<=10:
+  ground_cost=20+(4*weight1)
+elif weight1>10:
+  ground_cost=20+(4.75*weight1)
+#premium ground shipping
+premium_ground_cost=125
+#drone shipping
+drone_cost=0
+if weight1<=2:
+  drone_cost=4.50
+elif 2<weight1<=6:
+  drone_cost=9
+elif 6<weight1<=10:
+  drone_cost=12
+elif weight1>10:
+  drone_cost=14.25
+type_of_shipping=[ground_cost, premium_ground_cost, drone_cost]
+lowest=min(type_of_shipping)
+print(lowest)
